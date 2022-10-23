@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/wave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintTop_toTopOf="@+id/imageView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/aclonica"
+                android:text="Signup"
+                android:textColor="#BC000000"
+                android:textSize="40dp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/inputstyle"
+                android:drawableLeft="@drawable/user"
+                android:drawablePadding="20dp"
+                android:hint="Enter your Name"
+                android:padding="20dp"
+                android:textColor="#000"
+                android:inputType="text"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/inputstyle"
+                android:drawableLeft="@drawable/padlock"
+                android:drawablePadding="20dp"
+                android:hint="Enter your Password"
+                android:padding="20dp"
+                android:textColor="#000"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/inputstyle"
+                android:drawableLeft="@drawable/mail"
+                android:drawablePadding="20dp"
+                android:hint="Enter your Email"
+                android:padding="20dp"
+                android:inputType="textEmailAddress"
+                android:textColor="#000"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/signupnow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Signup Now"
+                android:padding="15dp"
+                android:backgroundTint="#3F51B5"
+                android:layout_marginVertical="10dp"
+                app:cornerRadius="50dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
